@@ -33,3 +33,9 @@ class AnswerItem(BaseModel):
 class AnswerSubmission(BaseModel):
     theme: str   
     answers: List[AnswerItem]
+
+class QuestionUpdate(BaseModel):
+    question: Optional[str] = None
+    options: Optional[List[str]] = None
+    correct_answer: Optional[str] = None
+    theme: Optional[str] = None
